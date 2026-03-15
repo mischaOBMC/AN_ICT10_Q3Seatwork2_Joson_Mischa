@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intramurals Team Checker</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        @font-face{
+        font-family: louis;
+        src: url(Louis\ George\ Cafe.ttf);
+        } 
+        @font-face{
+        font-family: bakego;
+        src: url(BAKEGO-Regular.ttf);
+        }  
+         body{
+            background-image: url(bg.jpg);
+            text-align: center;
+            color: floralwhite;
+            font-family: louis;
+        }
+        div{
+            background-color: rgb(36, 48, 77);
+            padding: 50px;
+            border-radius: 100px;
+            width: 80%;
+            height: 720px;
+            align-items: center;
+            margin-left: 86px;
+            margin-top: 28px;
+            max-height: 720px;
+            opacity: 95%;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 100px;
+            border: none;
+            background-color: #99668e;
+            color: white;
+            cursor: pointer;
+            width: 200px;
+            font-family: bakego;
+            margin-bottom: 9px;
+        }
+
+        button:hover{
+            background-color: #5d3855;
+        }
+
+        select, input{
+            margin: 5px;
+        }
+
+        #results{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(36, 48, 77);
+        }
+
+        #img_results{
+            margin-top: -30px;
+        }
+        h1{
+            font-family: bakego;
+            color:floralwhite;
+            font-size: 40px;
+        }
+        select{
+            font-size: 40px;
+            width: 800px;
+            text-align: center;
+            color: rgb(36, 48, 77);
+        }
+        #resultsdiv{
+            background-color: aliceblue;
+            width: 80%;
+            margin-top: -10px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>S.Y. 2025-2026 Intramurals Team Sorter</h1>
+        <form>
+            <p>Are you done with the online reservation?</p>
+            <input type="radio" id="res_yes" name="res" value="Yes">
+            <label for="res">Yes</label>
+
+            <input type="radio" id="res_no" name="res" value="No">
+            <label for="res">No</label>
+
+            <br><br>
+
+            <p>Do you have medical clearance from the clinic?</p>
+            <input type="radio" id="clearance_yes" name="clearance" value="clearance">
+            <label for="clearance">Yes</label>
+
+            <input type="radio" id="clearance_no" name="clearance" value="clearance">
+            <label for="option2">No</label>
+
+            <br><br>
+
+            <label for="grade">What's your Grade & Section?</label>
+            <br>
+            <select id="grade" name="grade">
+                <option value="" disabled selected>Choose your level</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <select id="sec" name="sec">
+                <option value="" disabled selected>Choose your section</option>
+                <option value="Emerald">Emerald</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+        </form>
+        <br>
+        <button py-click="sign">Sign Up</button>
+        <br><br>  
+        <div id="resultsdiv">
+            <p id="results"></p>
+            <img id="img_results" src="" style="max-width:250px">
+        </div>
+    </div>
+  <script type="py" src="main.py"></script>
+</body>
+</html>
